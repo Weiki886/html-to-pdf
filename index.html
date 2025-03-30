@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML转PDF工具</title>
+    <!-- 外部CSS库 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">HTML转PDF工具</h1>
+        
+        <div class="row flex-grow-1">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">HTML编辑器</h5>
+                    </div>
+                    <div class="card-body">
+                        <textarea id="htmlEditor"></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">预览</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="preview" class="preview-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <input type="text" id="filename" class="filename-input" placeholder="请输入文件名">
+            <span class="pdf-suffix">.pdf</span>
+            <button id="convertBtn" class="btn btn-primary btn-lg">转换为PDF</button>
+        </div>
+    </div>
+
+    <!-- 外部JavaScript库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- 自定义JavaScript -->
+    <script src="static/js/main.js"></script>
+</body>
+</html> 
